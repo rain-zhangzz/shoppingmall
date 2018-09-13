@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商城</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+    <style>
+        .logo{height:70px;}
+        .navbar{border:none;}
+        .container-fluid{padding: 0px;}
+        #nav-left .container-fluid{padding: 4px;background: #f6f6f6 url("https://www.runoob.com/wp-content/themes/runoob/assets/img/bg.gif") no-repeat;margin:0;}
+        .navbar-nav>li>a{padding-top:25px;padding-bottom: 25px;}
+        #nav-left{width:160px;float:left;background-color: #fff;color:#000;padding:0px;}
+        #main{float:left;}
+        #app:after{content:".";display:block;visibility: hidden;width:0;clear:both;}
+        .navbar{margin-bottom: 0;}
+        a{color:#000;}
+        a:hover,a:focus,a:visited{color:#F8B300;text-decoration: none;}
+        li{list-style: none;cursor: pointer;}
+        li:hover,li:focus{color:#F8B300;}
+    </style>
+</head>
+<body>
+<div id="app">
+    <div id="header">
+        <top></top>
+    </div>
+    <div id="nav-left">
+        <div class="container-fluid">
+            <div class="accordion" id="accordion2">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                            商城管理
+                        </a>
+                    </div>
+                    <ul id="collapseOne" class="accordion-body collapse" style="height: 0px; ">
+                        <li class="accordion-inner">
+                            <a href="javascript:;">商品管理</a>
+                        </li>
+                        <li class="accordion-inner">
+                            订单管理
+                        </li>
+                    </ul>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                            图层管理
+                        </a>
+                    </div>
+                    <ul id="collapseTwo" class="accordion-body collapse" style="height: 0px; ">
+                        <li class="accordion-inner">
+                            越野路线
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <h2>这里给点内容</h2>
+    </div>
+</div>
+
+<script src="top.js"></script>
+<script>
+
+    var vm = new Vue({
+        el:"#app",
+        data:{}
+    })
+
+</script>
+</body>
+</html>
